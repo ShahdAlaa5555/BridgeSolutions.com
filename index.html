@@ -2,71 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bridge Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #0b1c3e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 50px;
+    }
+
+    header img {
+      width: 100px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 15px;
+      color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
     .card {
+      background-color: #122a54;
+      border-radius: 15px;
+      padding: 30px 25px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #64b5f6;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
-<body class="bg-[#0a1d37] text-white min-h-screen flex flex-col items-center justify-start p-4">
+<body>
 
-  <!-- Header -->
-  <header class="w-full flex justify-between items-center py-6 px-4 max-w-7xl">
-    <div class="flex items-center space-x-4">
-      <img src="logo.png" alt="Bridge Solutions Logo" class="h-14 w-14 rounded-full border-2 border-white" />
-      <h1 class="text-3xl font-bold text-white">Bridge Solutions</h1>
-    </div>
-    <div class="text-sm">
-      <p>📞 0128809089</p>
-    </div>
+  <header>
+    <img src="logo.png" alt="Bridge Solutions Logo" />
+    <h1>Bridge Solutions</h1>
   </header>
 
-  <!-- Main Content -->
-  <main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 px-2">
-
-    <!-- Vision -->
-    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
-      <h2 class="text-xl font-bold mb-3">🚀 Our Vision</h2>
-      <p>
-        To revolutionize the digital landscape by delivering cutting-edge software solutions that drive innovation, efficiency, and growth for businesses worldwide.
-      </p>
+  <div class="container">
+    <div class="card">
+      <h2>Our Vision</h2>
+      <p>Empowering innovation and bridging the gap between technology and business needs through tailored digital solutions.</p>
     </div>
 
-    <!-- Mission -->
-    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
-      <h2 class="text-xl font-bold mb-3">🎯 Our Mission</h2>
-      <p>
-        We strive to empower our clients through innovative technologies, exceptional services, and tailored strategies that transform their business operations.
-      </p>
+    <div class="card">
+      <h2>Our Mission</h2>
+      <p>To deliver efficient, scalable, and innovative ERP systems and tech solutions that elevate business operations and maximize potential.</p>
     </div>
 
-    <!-- Services -->
-    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
-      <h2 class="text-xl font-bold mb-3">🛠️ Our Services</h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Web & App Development</li>
-        <li>UI/UX Design</li>
-        <li>Database Solutions</li>
-        <li>Cloud Integration</li>
-        <li>Technical Consulting</li>
-      </ul>
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>Phone: 0128809089<br/>Email: info@bridgesolutions.com<br/>Cairo, Egypt</p>
     </div>
+  </div>
 
-  </main>
-
-  <!-- Footer -->
-  <footer class="mt-12 text-sm text-gray-300">
+  <footer>
     &copy; 2025 Bridge Solutions. All rights reserved.
   </footer>
 
