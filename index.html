@@ -4,173 +4,177 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bridge Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #0a1e3f;
+      background: #0d1b2a;
       color: white;
       overflow-x: hidden;
-      transition: background 0.3s ease;
     }
 
-    .container {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
+    .hidden {
+      display: none;
     }
 
-    .welcome-screen {
+    .welcome {
       height: 100vh;
-      background: linear-gradient(to bottom right, #0d2c5a, #081933);
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
+      background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+      padding: 2rem;
     }
 
-    .welcome-screen h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .welcome h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
-    .welcome-screen p {
-      font-size: 20px;
-      margin-bottom: 40px;
+    .welcome p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
     .enter-btn {
-      background-color: #1a73e8;
+      padding: 0.8rem 2rem;
+      background-color: #0077b6;
       border: none;
-      padding: 15px 40px;
-      font-size: 18px;
-      border-radius: 30px;
       color: white;
+      font-size: 1rem;
+      border-radius: 10px;
       cursor: pointer;
       transition: 0.3s ease;
     }
 
     .enter-btn:hover {
-      background-color: #135abe;
-      transform: scale(1.05);
+      background-color: #00b4d8;
     }
 
-    .main-content {
-      display: none;
-      animation: fadeIn 0.8s ease forwards;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .main {
+      padding: 2rem;
       text-align: center;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-bottom: 60px;
+    .logo {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .company-name {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
     .card {
-      background: #112c52;
+      background-color: #1e2a3a;
+      padding: 2rem;
       border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #62aaff;
+    .card.vision {
+      background-color: #0077b6;
+      font-size: 1.2rem;
     }
 
-    .card p {
-      font-size: 16px;
-      line-height: 1.5;
+    .contact-info {
+      margin-top: 2rem;
+      background-color: #1e2a3a;
+      padding: 1.5rem;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
     }
 
-    .contact {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 60px;
-      padding-bottom: 30px;
+    a {
+      color: #00b4d8;
+      text-decoration: none;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="welcome-screen" id="welcome">
+
+  <!-- Welcome Section -->
+  <section class="welcome" id="welcomePage">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bridge_icon.svg/1200px-Bridge_icon.svg.png" class="logo" alt="Logo"/>
     <h1>Welcome to Bridge Solutions</h1>
-    <p>Innovative tech solutions for a smarter tomorrow</p>
-    <button class="enter-btn" onclick="enterSite()">Enter Site</button>
-  </div>
+    <p>Innovative Tech for a Connected Future</p>
+    <button class="enter-btn" onclick="showMain()">Enter Site</button>
+  </section>
 
-  <div class="main-content" id="main">
-    <div class="container">
+  <!-- Main Section -->
+  <section class="main hidden" id="mainPage">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Bridge_icon.svg/1200px-Bridge_icon.svg.png" class="logo" alt="Logo"/>
+    <div class="company-name">Bridge Solutions</div>
 
-      <div class="card-grid">
-        <div class="card">
-          <h3>Our Vision</h3>
-          <p>To be a leading provider of innovative, reliable, and cutting-edge digital solutions tailored for modern businesses.</p>
-        </div>
-
-        <div class="card">
-          <h3>Our Mission</h3>
-          <p>Empowering organizations with tailored digital strategies and tools that streamline operations and enhance customer engagement.</p>
-        </div>
-
-        <div class="card">
-          <h3>Our Services</h3>
-          <p>Web & App Development, Cloud Integration, Data Analytics, Cybersecurity, and IT Consultancy.</p>
-        </div>
-
-        <div class="card">
-          <h3>Why Choose Us?</h3>
-          <p>Experienced professionals, client-first approach, end-to-end support, and cost-effective scalable solutions.</p>
-        </div>
-
-        <div class="card">
-          <h3>Our Products & Solutions</h3>
-          <p>Custom ERP Systems, eCommerce Platforms, AI-Powered Chatbots, Business Dashboards, and Automation Tools designed to elevate your operations.</p>
-        </div>
+    <div class="cards">
+      <div class="card vision">
+        <strong>Vision</strong>
+        <p>
+          To revolutionize connectivity through cutting-edge technological solutions that bridge gaps and drive progress across industries.
+        </p>
       </div>
 
-      <div class="contact">
-        📞 <strong>Contact us:</strong> 0128809089
+      <div class="card">
+        <strong>Mission</strong>
+        <p>
+          Our mission is to deliver smart, sustainable, and scalable digital services that empower businesses and enhance user experiences globally.
+        </p>
+      </div>
+
+      <div class="card">
+        <strong>Objectives</strong>
+        <p>
+          Deliver efficient solutions, expand digital reach, and foster innovation through advanced technologies and a customer-centric approach.
+        </p>
       </div>
     </div>
-  </div>
+
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:contact@bridgesolutions.com">contact@bridgesolutions.com</a></p>
+      <p>Phone: +20 100 123 4567</p>
+      <p>Address: 15 Smart City St., Cairo, Egypt</p>
+    </div>
+  </section>
 
   <script>
-    function enterSite() {
-      document.getElementById("welcome").style.display = "none";
-      document.getElementById("main").style.display = "block";
+    function showMain() {
+      document.getElementById('welcomePage').classList.add('hidden');
+      document.getElementById('mainPage').classList.remove('hidden');
     }
   </script>
+
 </body>
 </html>
