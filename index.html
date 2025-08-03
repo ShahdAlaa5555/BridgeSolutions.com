@@ -1,172 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bridge Solutions Egypt</title>
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-      }
 
-      header {
-        background-color: #004080;
-        color: #fff;
-        padding: 30px 20px;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridge Solutions Egypt</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #00416A;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #00416A;
+      border-bottom: 2px solid #00416A;
+      padding-bottom: 0.5rem;
+    }
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .service-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 calc(33% - 2rem);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      min-width: 280px;
+    }
+    .contact {
+      background-color: #f1f1f1;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #00416A;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
 
-      header h1 {
-        margin: 0;
-        font-size: 32px;
-      }
+<body>
+  <header>Bridge Solutions Egypt</header>
 
-      nav {
-        background-color: #003060;
-        padding: 10px 0;
-        text-align: center;
-      }
+  <section>
+    <h2 class="section-title">About Us</h2>
+    <p>Bridge Solutions is an Egypt-based firm offering a wide range of administrative, engineering, and technical services tailored for UAE and GCC companies operating in Egypt. We serve as a reliable local partner to ensure efficient, smooth, and compliant operations.</p>
 
-      nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-      }
+    <h2 class="section-title">Our Vision</h2>
+    <p>To be the trusted partner of choice for Gulf companies in Egypt by delivering high-quality, transparent, and timely services.</p>
 
-      .container {
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .section {
-        margin-bottom: 50px;
-      }
-
-      h2 {
-        color: #004080;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
-      }
-
-      .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
-      }
-
-      .card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        flex: 1 1 calc(33% - 20px);
-        min-width: 280px;
-        max-width: calc(33% - 20px);
-        transition: transform 0.3s;
-      }
-
-      .card:hover {
-        transform: translateY(-5px);
-      }
-
-      footer {
-        background-color: #003060;
-        color: white;
-        text-align: center;
-        padding: 30px 20px;
-      }
-
-      .contact-info {
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.8;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Bridge Solutions Egypt</h1>
-    </header>
-
-    <div class="container">
-      <section class="section">
-        <h2>About Us</h2>
-        <p>
-          Bridge Solutions is an Egypt-based firm offering a wide range of administrative,
-          engineering, and technical services tailored for UAE and GCC companies operating in
-          Egypt. We serve as a reliable local partner to ensure efficient, smooth, and
-          compliant operations.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>Our Vision</h2>
-        <p>
-          To be the trusted partner of choice for Gulf companies in Egypt by delivering
-          high-quality, transparent, and timely services.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>Our Services</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Administrative & Operational Services</h3>
-            <ul>
-              <li>Company setup and licensing</li>
-              <li>Translation and secretarial services</li>
-              <li>Temporary and permanent operational support</li>
-              <li>HR outsourcing and staffing</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Technical & Engineering Services</h3>
-            <ul>
-              <li>Project management</li>
-              <li>Facility maintenance and operations</li>
-              <li>Interior design and technical fit-outs</li>
-              <li>IT & network support</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Supply & Logistical Support</h3>
-            <ul>
-              <li>Office supplies and procurement</li>
-              <li>Administrative outsourcing</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Target Clients</h2>
-        <p>
-          UAE and GCC companies operating in Egypt, including real estate developers,
-          construction firms, tech companies, and investment offices.
-        </p>
-      </section>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Administrative & Operational Services</h3>
+        <ul>
+          <li>Company setup and licensing</li>
+          <li>Translation and secretarial services</li>
+          <li>Temporary and permanent operational support</li>
+          <li>HR outsourcing and staffing</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Technical & Engineering Services</h3>
+        <ul>
+          <li>Project management</li>
+          <li>Facility maintenance and operations</li>
+          <li>Interior design and technical fit-outs</li>
+          <li>IT & network support</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Supply & Logistical Support</h3>
+        <ul>
+          <li>Office supplies and procurement</li>
+          <li>Administrative outsourcing</li>
+        </ul>
+      </div>
     </div>
 
-    <footer>
-      <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>Email: info@bridgesolutions-eg.com</p>
-        <p>Phone: +20128809089</p>
-        <p>Address: Cairo, Egypt</p>
-        <p>LinkedIn: <a href="#" style="color:#fff; text-decoration: underline">[your link]</a></p>
-        <p>Website: www.bridgesolutions-eg.com</p>
-      </div>
-    </footer>
-  </body>
+    <h2 class="section-title">Target Clients</h2>
+    <p>UAE and GCC companies operating in Egypt, including real estate developers, construction firms, tech companies, and investment offices.</p>
+
+    <div class="contact">
+      <h2 class="section-title">Contact Information</h2>
+      <p><strong>Email:</strong> info@bridgesolutions-eg.com</p>
+      <p><strong>Phone:</strong> +20128809089</p>
+      <p><strong>Address:</strong> Cairo, Egypt</p>
+      <p><strong>LinkedIn:</strong> <a href="#">[your link]</a></p>
+      <p><strong>Website:</strong> www.bridgesolutions-eg.com</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Bridge Solutions Egypt. All rights reserved.
+  </footer>
+</body>
+
 </html>
