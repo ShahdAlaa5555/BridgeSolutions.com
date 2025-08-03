@@ -2,135 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bridge Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-
     body {
-      background-color: #0c1c3d;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0c1a3e;
       color: white;
-      overflow-x: hidden;
     }
 
-    .welcome-container {
+    .welcome, .main-content {
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      background: linear-gradient(to bottom right, #0c1c3d, #132b56);
-    }
-
-    .welcome-title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .enter-btn {
-      background-color: white;
-      color: #0c1c3d;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .enter-btn:hover {
-      transform: scale(1.05);
-      background-color: #f0f0f0;
+      transition: opacity 0.6s ease;
     }
 
     .main-content {
       display: none;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
+      padding-top: 50px;
+    }
+
+    .button {
+      padding: 12px 24px;
+      background-color: #1a2d6b;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #314c9b;
+      transform: scale(1.05);
     }
 
     .logo {
       width: 100px;
-      margin-bottom: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 30px auto;
     }
 
     .card {
       background-color: white;
-      color: #0c1c3d;
-      padding: 2rem;
-      margin: 1rem;
+      color: #0c1a3e;
+      padding: 25px;
       border-radius: 16px;
-      width: 90%;
-      max-width: 800px;
+      width: 280px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(255,255,255,0.3);
     }
 
     .vision-card {
-      font-size: 1.4rem;
+      background-color: #ffffff;
+      color: #0c1a3e;
+      font-size: 22px;
       font-weight: bold;
+      width: 90%;
+      max-width: 700px;
+      padding: 40px;
+      margin-bottom: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
-    .footer {
+    .contact {
       background-color: white;
-      color: #0c1c3d;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 1.5rem;
-      border-radius: 16px;
-      margin-top: 3rem;
-      width: 90%;
-      max-width: 1000px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      color: #0c1a3e;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="welcome-container" id="welcome">
-    <h1 class="welcome-title">Welcome to Bridge Solutions</h1>
-    <button class="enter-btn" onclick="showMain()">Enter</button>
+
+  <!-- Welcome Section -->
+  <div class="welcome" id="welcome">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="logo" alt="Company Logo" />
+    <h1>Welcome to Bridge Solutions</h1>
+    <button class="button" onclick="enterSite()">Enter Site</button>
   </div>
 
+  <!-- Main Content -->
   <div class="main-content" id="main">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Bridge_icon.svg/1024px-Bridge_icon.svg.png" alt="Logo" class="logo" />
-
-    <div class="card vision-card">
-      Our Vision: To revolutionize industries through tailored software solutions that optimize operations, elevate customer experience, and drive innovation.
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="logo" alt="Company Logo" />
+    <div class="vision-card">
+      Our Vision is to lead the digital transformation across industries through cutting-edge technology solutions that drive growth and efficiency.
     </div>
 
-    <div class="card">Our Mission: Deliver robust, scalable, and cost-effective software tailored to clients’ specific needs, ensuring efficiency, user satisfaction, and seamless integration.</div>
-    <div class="card">Our Values: Innovation, Integrity, Client-Centricity, Excellence.</div>
-    <div class="card">Our Services: Customized ERP systems, business process automation, cloud solutions, mobile/web apps, data analytics.</div>
-    <div class="card">Target Audience: Medium-to-large enterprises in retail, manufacturing, logistics, healthcare, and finance.</div>
-    <div class="card">Competitive Advantage: Agile development, expert teams, cutting-edge technologies, strong client collaboration, post-launch support.</div>
+    <div class="cards-container">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>Deliver reliable, scalable, and innovative IT services tailored to our clients’ business goals.</p>
+      </div>
 
-    <div class="footer">
-      <div><strong>📞</strong> 0128809089</div>
-      <div><strong>📧</strong> BridgeSolutions@gmail.com</div>
-      <div><strong>📍</strong> New Cairo, Egypt</div>
+      <div class="card">
+        <h2>Core Values</h2>
+        <p>Integrity, Excellence, Innovation, Collaboration, and Customer Success.</p>
+      </div>
+
+      <div class="card">
+        <h2>Services</h2>
+        <p>Custom Software Development, Cloud Solutions, ERP Consulting, and IT Support Services.</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      📧 Email: info@bridgesolutions.com | 📞 Phone: +20 100 123 4567 | 📍 Address: Cairo, Egypt
     </div>
   </div>
 
   <script>
-    function showMain() {
-      document.getElementById("welcome").style.display = "none";
-      document.getElementById("main").style.display = "flex";
+    function enterSite() {
+      document.getElementById('welcome').style.display = 'none';
+      document.getElementById('main').style.display = 'flex';
     }
   </script>
 </body>
