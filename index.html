@@ -1,74 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bridge Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-  </style>
-</head>
-<body class="bg-[#0a1d37] text-white min-h-screen flex flex-col items-center justify-start p-4">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bridge Solutions Egypt</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
 
-  <!-- Header -->
-  <header class="w-full flex justify-between items-center py-6 px-4 max-w-7xl">
-    <div class="flex items-center space-x-4">
-      <img src="logo.png" alt="Bridge Solutions Logo" class="h-14 w-14 rounded-full border-2 border-white" />
-      <h1 class="text-3xl font-bold text-white">Bridge Solutions</h1>
+      header {
+        background-color: #004080;
+        color: #fff;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      nav {
+        background-color: #003060;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .container {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section {
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        color: #004080;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 10px;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+
+      .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(33% - 20px);
+        min-width: 280px;
+        max-width: calc(33% - 20px);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      footer {
+        background-color: #003060;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .contact-info {
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bridge Solutions Egypt</h1>
+    </header>
+
+    <div class="container">
+      <section class="section">
+        <h2>About Us</h2>
+        <p>
+          Bridge Solutions is an Egypt-based firm offering a wide range of administrative,
+          engineering, and technical services tailored for UAE and GCC companies operating in
+          Egypt. We serve as a reliable local partner to ensure efficient, smooth, and
+          compliant operations.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Our Vision</h2>
+        <p>
+          To be the trusted partner of choice for Gulf companies in Egypt by delivering
+          high-quality, transparent, and timely services.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Our Services</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Administrative & Operational Services</h3>
+            <ul>
+              <li>Company setup and licensing</li>
+              <li>Translation and secretarial services</li>
+              <li>Temporary and permanent operational support</li>
+              <li>HR outsourcing and staffing</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Technical & Engineering Services</h3>
+            <ul>
+              <li>Project management</li>
+              <li>Facility maintenance and operations</li>
+              <li>Interior design and technical fit-outs</li>
+              <li>IT & network support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Supply & Logistical Support</h3>
+            <ul>
+              <li>Office supplies and procurement</li>
+              <li>Administrative outsourcing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Target Clients</h2>
+        <p>
+          UAE and GCC companies operating in Egypt, including real estate developers,
+          construction firms, tech companies, and investment offices.
+        </p>
+      </section>
     </div>
-    <div class="text-sm">
-      <p>📞 0128809089</p>
-    </div>
-  </header>
 
-  <!-- Main Content -->
-  <main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 px-2">
-
-    <!-- Vision -->
-    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
-      <h2 class="text-xl font-bold mb-3">🚀 Our Vision</h2>
-      <p>
-        To revolutionize the digital landscape by delivering cutting-edge software solutions that drive innovation, efficiency, and growth for businesses worldwide.
-      </p>
-    </div>
-
-    <!-- Mission -->
-    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
-      <h2 class="text-xl font-bold mb-3">🎯 Our Mission</h2>
-      <p>
-        We strive to empower our clients through innovative technologies, exceptional services, and tailored strategies that transform their business operations.
-      </p>
-    </div>
-
-    <!-- Services -->
-    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
-      <h2 class="text-xl font-bold mb-3">🛠️ Our Services</h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Web & App Development</li>
-        <li>UI/UX Design</li>
-        <li>Database Solutions</li>
-        <li>Cloud Integration</li>
-        <li>Technical Consulting</li>
-      </ul>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="mt-12 text-sm text-gray-300">
-    &copy; 2025 Bridge Solutions. All rights reserved.
-  </footer>
-
-</body>
+    <footer>
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Email: info@bridgesolutions-eg.com</p>
+        <p>Phone: +20128809089</p>
+        <p>Address: Cairo, Egypt</p>
+        <p>LinkedIn: <a href="#" style="color:#fff; text-decoration: underline">[your link]</a></p>
+        <p>Website: www.bridgesolutions-eg.com</p>
+      </div>
+    </footer>
+  </body>
 </html>
