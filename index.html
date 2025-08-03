@@ -4,179 +4,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bridge Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
-      background: #0e1b2b;
-      color: white;
-      padding: 40px 20px;
+      font-family: 'Poppins', sans-serif;
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .logo {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 10px;
-      border-radius: 50%;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: #ffffff;
-      margin-bottom: 30px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-
     .card {
-      background: #ffffff;
-      color: #1e2a38;
-      border-radius: 20px;
-      padding: 30px 25px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      opacity: 0;
-      transform: translateY(40px);
-      animation: fadeInUp 0.8s forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
-    }
-
-    .card:nth-child(1) { animation-delay: 0.1s; }
-    .card:nth-child(2) { animation-delay: 0.2s; }
-    .card:nth-child(3) { animation-delay: 0.3s; }
-    .card:nth-child(4) { animation-delay: 0.4s; }
-    .card:nth-child(5) { animation-delay: 0.5s; }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .card h3 {
-      color: #154c94;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
-
-    .card ul {
-      padding-left: 20px;
-      text-align: left;
-    }
-
-    .card p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .contact, .footer {
-      background: #ffffff;
-      color: #1e2a38;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-      margin-bottom: 20px;
-    }
-
-    .contact h3 {
-      margin-bottom: 10px;
-      color: #154c94;
-    }
-
-    .footer {
-      font-size: 14px;
-      opacity: 0.85;
-    }
-
-    a {
-      color: #154c94;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <img class="logo" src="https://via.placeholder.com/70x70?text=BS" alt="Logo" />
-    <h1>Bridge Solutions</h1>
+<body class="bg-[#0a1d37] text-white min-h-screen flex flex-col items-center justify-start p-4">
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Vision</h3>
-        <p>Providing comprehensive operational, technical, and logistical support tailored for businesses in Egypt and the GCC.</p>
-      </div>
-
-      <div class="card">
-        <h3>Operational Support</h3>
-        <ul>
-          <li>Temporary and permanent operational support</li>
-          <li>HR outsourcing and staffing</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Technical & Engineering Services</h3>
-        <ul>
-          <li>Project management</li>
-          <li>Facility maintenance and operations</li>
-          <li>Interior design and technical fit-outs</li>
-          <li>IT & network support</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Supply & Logistical Support</h3>
-        <ul>
-          <li>Office supplies and procurement</li>
-          <li>Administrative outsourcing</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Target Clients</h3>
-        <p>UAE and GCC companies operating in Egypt, including real estate developers, construction firms, tech companies, and investment offices.</p>
-      </div>
+  <!-- Header -->
+  <header class="w-full flex justify-between items-center py-6 px-4 max-w-7xl">
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="Bridge Solutions Logo" class="h-14 w-14 rounded-full border-2 border-white" />
+      <h1 class="text-3xl font-bold text-white">Bridge Solutions</h1>
     </div>
+    <div class="text-sm">
+      <p>📞 0128809089</p>
+    </div>
+  </header>
 
-    <div class="contact">
-      <h3>Contact Information</h3>
+  <!-- Main Content -->
+  <main class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 px-2">
+
+    <!-- Vision -->
+    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
+      <h2 class="text-xl font-bold mb-3">🚀 Our Vision</h2>
       <p>
-        Email: <a href="mailto:info@bridgesolutions-eg.com">info@bridgesolutions-eg.com</a><br/>
-        Phone: +20 128 809 089<br/>
-        Address: Cairo, Egypt<br/>
-        LinkedIn: <a href="#">LinkedIn Profile</a><br/>
-        Website: <a href="http://www.bridgesolutions-eg.com" target="_blank">www.bridgesolutions-eg.com</a>
+        To revolutionize the digital landscape by delivering cutting-edge software solutions that drive innovation, efficiency, and growth for businesses worldwide.
       </p>
     </div>
 
-    <div class="footer">
-      &copy; 2025 Bridge Solutions. All rights reserved.
+    <!-- Mission -->
+    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
+      <h2 class="text-xl font-bold mb-3">🎯 Our Mission</h2>
+      <p>
+        We strive to empower our clients through innovative technologies, exceptional services, and tailored strategies that transform their business operations.
+      </p>
     </div>
-  </div>
+
+    <!-- Services -->
+    <div class="card bg-white text-[#0a1d37] p-6 rounded-2xl shadow-lg">
+      <h2 class="text-xl font-bold mb-3">🛠️ Our Services</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Web & App Development</li>
+        <li>UI/UX Design</li>
+        <li>Database Solutions</li>
+        <li>Cloud Integration</li>
+        <li>Technical Consulting</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 text-sm text-gray-300">
+    &copy; 2025 Bridge Solutions. All rights reserved.
+  </footer>
+
 </body>
 </html>
