@@ -2,115 +2,181 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bridge Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #0b1c3e;
+      background: #0a1e3f;
       color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header {
-      margin-bottom: 50px;
-    }
-
-    header img {
-      width: 100px;
-      height: auto;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-top: 15px;
-      color: #ffffff;
+      overflow-x: hidden;
+      transition: background 0.3s ease;
     }
 
     .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .welcome-screen {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #0d2c5a, #081933);
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
+      text-align: center;
+    }
+
+    .welcome-screen h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-screen p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    .enter-btn {
+      background-color: #1a73e8;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      background-color: #135abe;
+      transform: scale(1.05);
+    }
+
+    .main-content {
+      display: none;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      height: 80px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
+      margin-bottom: 60px;
     }
 
     .card {
-      background-color: #122a54;
-      border-radius: 15px;
-      padding: 30px 25px;
-      width: 300px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      background: #112c52;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
     }
 
-    .card h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      color: #64b5f6;
+    .card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #62aaff;
     }
 
     .card p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #ccc;
+    .contact {
+      text-align: center;
+      font-size: 18px;
     }
 
-    @media (max-width: 768px) {
-      .card {
-        width: 90%;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-
-      h1 {
-        font-size: 2rem;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
 </head>
 <body>
+  <div class="welcome-screen" id="welcome">
+    <h1>Welcome to Bridge Solutions</h1>
+    <p>Innovative tech solutions for a smarter tomorrow</p>
+    <button class="enter-btn" onclick="enterSite()">Enter Site</button>
+  </div>
 
-  <header>
-    <img src="logo.png" alt="Bridge Solutions Logo" />
-    <h1>Bridge Solutions</h1>
-  </header>
+  <div class="main-content" id="main">
+    <div class="container">
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Bridge_icon_blue.svg" alt="Bridge Solutions Logo"/>
+      </div>
 
-  <div class="container">
-    <div class="card">
-      <h2>Our Vision</h2>
-      <p>Empowering innovation and bridging the gap between technology and business needs through tailored digital solutions.</p>
-    </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Our Vision</h3>
+          <p>To be a leading provider of innovative, reliable, and cutting-edge digital solutions tailored for modern businesses.</p>
+        </div>
 
-    <div class="card">
-      <h2>Our Mission</h2>
-      <p>To deliver efficient, scalable, and innovative ERP systems and tech solutions that elevate business operations and maximize potential.</p>
-    </div>
+        <div class="card">
+          <h3>Our Mission</h3>
+          <p>Empowering organizations with tailored digital strategies and tools that streamline operations and enhance customer engagement.</p>
+        </div>
 
-    <div class="card">
-      <h2>Contact Us</h2>
-      <p>Phone: 0128809089<br/>Email: info@bridgesolutions.com<br/>Cairo, Egypt</p>
+        <div class="card">
+          <h3>Our Services</h3>
+          <p>Web & App Development, Cloud Integration, Data Analytics, Cybersecurity, and IT Consultancy.</p>
+        </div>
+
+        <div class="card">
+          <h3>Why Choose Us?</h3>
+          <p>Experienced professionals, client-first approach, end-to-end support, and cost-effective scalable solutions.</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        📞 <strong>Contact us:</strong> 0128809089
+      </div>
     </div>
   </div>
 
-  <footer>
-    &copy; 2025 Bridge Solutions. All rights reserved.
-  </footer>
-
+  <script>
+    function enterSite() {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    }
+  </script>
 </body>
 </html>
+
