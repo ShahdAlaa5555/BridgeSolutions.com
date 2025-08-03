@@ -2,97 +2,76 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bridge Solutions</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
     }
-    .fade-in {
-      animation: fadeIn 1s ease-in;
+    .card {
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 
-<body class="bg-gray-100">
-  <!-- Landing Page -->
-  <div id="landing" class="min-h-screen bg-gradient-to-br from-blue-900 to-blue-700 flex flex-col items-center justify-center text-white text-center">
-    <h1 class="text-5xl font-bold mb-6">Welcome to Bridge Solutions</h1>
-    <button onclick="enterSite()" class="bg-white text-blue-800 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition">Enter Site</button>
-  </div>
+<body class="bg-gray-900 text-white">
+  <header class="text-center py-6 bg-gray-800 shadow-md">
+    <h1 class="text-4xl font-bold">Bridge Solutions</h1>
+  </header>
 
-  <!-- Main Content -->
-  <div id="main-content" class="hidden fade-in">
-    <!-- Header -->
-    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
-      <div class="flex items-center space-x-4">
-        <img src="https://img.icons8.com/ios-filled/50/1E3A8A/network.png" alt="Logo" class="w-8 h-8">
-        <span class="text-2xl font-bold text-blue-800">Bridge Solutions</span>
-      </div>
-    </header>
+  <main class="px-6 py-12 max-w-6xl mx-auto">
+    <section class="text-center mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Welcome to Bridge Solutions</h2>
+      <p class="text-gray-300 max-w-3xl mx-auto">
+        We specialize in delivering customized enterprise solutions that bridge the gap between technology and business needs. From ERP implementations to data management and software development, we empower organizations to reach their full potential through innovative IT strategies.
+      </p>
+    </section>
 
-    <!-- Content -->
-    <main class="max-w-4xl mx-auto px-4 py-8 space-y-6">
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center">
-        <h2 class="text-3xl font-bold text-blue-800 mb-2">Our Vision</h2>
-        <p class="text-gray-700 text-lg">We aim to revolutionize the digital world with innovative software solutions, providing exceptional service and long-term value to our clients.</p>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Vision Card -->
+      <div class="card bg-white text-gray-900 p-6 rounded-xl col-span-1 md:col-span-3">
+        <h3 class="text-xl font-bold mb-2">Our Vision</h3>
+        <p>To be a leading provider of intelligent and integrated digital solutions that drive sustainable growth and operational excellence for businesses worldwide.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-2xl shadow-md">
-          <h3 class="text-xl font-bold text-blue-800 mb-2">Our Mission</h3>
-          <p class="text-gray-700">To deliver high-quality, tailor-made software solutions that empower businesses to thrive in a rapidly evolving digital environment.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow-md">
-          <h3 class="text-xl font-bold text-blue-800 mb-2">Our Goals</h3>
-          <p class="text-gray-700">To foster innovation, promote digital transformation, and build lasting partnerships with our clients.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow-md">
-          <h3 class="text-xl font-bold text-blue-800 mb-2">Values</h3>
-          <p class="text-gray-700">Integrity, Collaboration, Innovation, Excellence, Customer-Centricity.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow-md">
-          <h3 class="text-xl font-bold text-blue-800 mb-2">Services</h3>
-          <p class="text-gray-700">Software Development, ERP Implementation, Cloud Services, Business Intelligence, IT Consulting.</p>
-        </div>
+      <!-- Mission Card -->
+      <div class="card bg-white text-gray-900 p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-2">Our Mission</h3>
+        <p>To deliver high-quality, scalable, and secure IT solutions tailored to our clients’ unique business challenges while fostering a culture of innovation, collaboration, and continuous improvement.</p>
       </div>
-    </main>
 
-    <!-- Contact Footer -->
-    <footer class="bg-white mt-12 border-t border-gray-200 py-6 px-4">
-      <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-700">
-        <div class="mb-4 md:mb-0">
-          <p class="font-semibold text-blue-800">Bridge Solutions</p>
-          <p>📍 Cairo, Egypt</p>
-          <p>☎️ +20 123 456 7890</p>
-          <p>📧 info@bridgesolutions.com</p>
-        </div>
-        <div>
-          <a href="https://github.com/ShahdAlaa5555" target="_blank" class="text-blue-800 hover:underline">GitHub</a>
-        </div>
+      <!-- Services Card -->
+      <div class="card bg-white text-gray-900 p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-2">Our Services</h3>
+        <p>We offer ERP system implementation, Oracle solutions, enterprise software development, data analytics, and ongoing tech support designed to optimize your business processes.</p>
       </div>
-    </footer>
-  </div>
 
-  <script>
-    function enterSite() {
-      document.getElementById('landing').style.display = 'none';
-      const main = document.getElementById('main-content');
-      main.style.display = 'block';
-    }
-  </script>
+      <!-- Values Card -->
+      <div class="card bg-white text-gray-900 p-6 rounded-xl">
+        <h3 class="text-xl font-bold mb-2">Our Values</h3>
+        <p>Integrity, innovation, client-focus, and excellence guide every solution we build and every relationship we foster.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white text-gray-800 p-6 mt-16">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <p class="text-lg font-semibold">Bridge Solutions</p>
+      <div class="text-sm text-center md:text-right space-y-1 md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+        <span>Email: info@bridgesolutions.com</span>
+        <span>Phone: +20 123 456 7890</span>
+        <span>Address: Cairo, Egypt</span>
+        <span>GitHub: github.com/bridgesolutions</span>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
